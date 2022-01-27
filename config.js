@@ -12,7 +12,7 @@ module.exports = {
     // * firefox:headless
     // * opera
     // * safari
-    browsers: ['firefox:headless'],
+    browsers: ['chrome:headless'],
 
     // directories to which screenshots will be saved
     screenshots: {
@@ -27,12 +27,12 @@ module.exports = {
 
     // definitions for public pages
     public: {
-        baseURL: 'https://www.github.com/',
+        baseURL: 'https://www.stickermule.com/',
 
         // path segments to define pages. Will be appended to baseURL
-        paths: [
-            'ericyd/visual-regression'
-        ],
+        paths: require('./blog-slugs').map(post => {
+            return `blog/${post.slug}`
+        }),
 
         // true will skip testing for all public pages
         // skip: true
@@ -70,16 +70,16 @@ module.exports = {
     },
 
     // override default screen resolutions for screenshot capture
-    // resolutions: [
-    //     [1920, 1080],
-    //     [1600, 900],
-    //     [1440, 900],
-    //     [1440, 1024],
-    //     [1366, 768],
-    //     [1280, 1024],
-    //     [1280, 800],
-    //     [1024, 768],
-    //     [768, 1024],
-    //     [320, 480]
-    // ],
+    resolutions: [
+        [1920, 1080],
+        // [1600, 900],
+        // [1440, 900],
+        // [1440, 1024],
+        // [1366, 768],
+        // [1280, 1024],
+        // [1280, 800],
+        // [1024, 768],
+        // [768, 1024],
+        [320, 480]
+    ],
 }

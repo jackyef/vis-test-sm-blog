@@ -59,14 +59,14 @@ typings/
 
 # package specific
 html
-screenshots/actual
-screenshots/result
+# screenshots/actual
+# screenshots/result
 
 # comment out this directory if you want to save the "expected" screenshots
-screenshots/expected
+# screenshots/expected
 
 # comment out this directory if you want to save the mochawesome reports
 # alternatively, you can always zip the directory for archiving purposes
-mochawesome-report
+# mochawesome-report
 
 *.tmp.json
